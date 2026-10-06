@@ -1,9 +1,6 @@
 import "normalize.css";
-
 import "./styles/variables.scss";
-
 import "./styles/global.scss";
-
 import "./styles/header.scss";
 import "./styles/footer.scss";
 import "./styles/side_menu.scss";
@@ -37,5 +34,34 @@ if (feedbackOverlay) feedbackOverlay.addEventListener("click", closeFeedback);
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && feedbackModal && !feedbackModal.hidden) {
     closeFeedback();
+  }
+});
+
+const sideMenu = document.querySelector(".side_menu");
+const menuOpen = document.querySelector(".menu-open");
+const menuClose = document.querySelector(".menu-close");
+const menuOverlay = document.querySelector(".menu-overlay");
+
+function openMenu() {
+  if (!sideMenu) return;
+  sideMenu.classList.add("side_menu--open");
+  if (menuOverlay) menuOverlay.classList.add("menu-overlay--visible");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMenu() {
+  if (!sideMenu) return;
+  sideMenu.classList.remove("side_menu--open");
+  if (menuOverlay) menuOverlay.classList.remove("menu-overlay--visible");
+  document.body.style.overflow = "";
+}
+
+if (menuOpen) menuOpen.addEventListener("click", openMenu);
+if (menuClose) menuClose.addEventListener("click", closeMenu);
+if (menuOverlay) menuOverlay.addEventListener("click", closeMenu);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && sideMenu?.classList.contains("side_menu--open")) {
+    closeMenu();
   }
 });
