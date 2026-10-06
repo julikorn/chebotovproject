@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("/src/fonts/TTLakes-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTLakes Condensed";
+  src: url("/src/fonts/TTLakesCondensed-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.active {
+  color: gray;
+}
+.active::before {
+  position: absolute;
+  left: -20px;
+  top: -6px;
+  width: 4px;
+  height: 40px;
+  border-radius: 2px;
+  content: "";
+  background-color: rgba(65, 246, 215, 1);
+}

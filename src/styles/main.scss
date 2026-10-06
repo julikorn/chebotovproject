@@ -6,7 +6,8 @@
 .main {
   font-family: var(--font-primary);
   background-color: #f8f8f8;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
 
   &__services {
     padding-top: 28px;
@@ -156,7 +157,6 @@
       margin-top: 24px;
       width: 100%;
       padding: 16px;
-      /* gradient */
 
       background: linear-gradient(360deg, #f8f8f8 0%, #ffffff 98.61%);
 
@@ -198,7 +198,7 @@
           padding: 16px;
           box-sizing: border-box;
 
-          &[data-slide-type='types'] {
+          &[data-slide-type="types"] {
             width: 240px;
             height: 160px;
 
@@ -213,7 +213,7 @@
             }
           }
 
-          &[data-slide-type='price'] {
+          &[data-slide-type="price"] {
             position: relative;
             display: flex;
             width: 280px;
@@ -260,8 +260,6 @@
             }
           }
         }
-
-        /* Изменить цвет всех точек */
       }
 
       &-wrapper-slide img {
@@ -300,8 +298,8 @@
 }
 
 .swiper-pagination-bullet {
-  width: 12px; /* Новая ширина */
-  height: 12px; /* Новая высота */
+  width: 12px;
+  height: 12px;
   background-color: rgba(221, 221, 221, 1);
 }
 
@@ -318,7 +316,6 @@
   z-index: 10;
 }
 
-/* Для первого слайдера */
 .swiper-pagination:not([data-pagination-type]) {
   bottom: -90px !important;
   left: 50% !important;
@@ -326,15 +323,14 @@
   width: auto !important;
 }
 
-/* Для второго слайдера */
-.swiper-pagination[data-pagination-type='second'] {
+.swiper-pagination[data-pagination-type="second"] {
   bottom: -190px !important; /* Другое положение */
   left: 35% !important; /* Сдвиг влево */
   transform: none !important;
   width: auto !important;
 }
 
-.swiper-pagination[data-pagination-type='three'] {
+.swiper-pagination[data-pagination-type="three"] {
   bottom: -220px !important; /* Другое положение */
   left: 35% !important; /* Сдвиг влево */
   transform: none !important;

@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'TTLakes';
-  src: url('/TTLakesCondensed-Regular.ttf');
+  font-family: "TTLakes";
+  src: url("/TTLakesCondensed-Regular.ttf");
 }
 
 .active {
@@ -13,12 +13,12 @@
   width: 4px;
   height: 40px;
   border-radius: 2px;
-  content: '';
+  content: "";
   background-color: rgba(65, 246, 215, 1);
 }
 
 .side_menu {
-  font-family: 'TTLakes';
+  font-family: "TTLakes";
   background-color: rgb(255, 255, 255);
   height: 100vh;
   width: 300px;
@@ -89,7 +89,7 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     display: block;
   }
 }
