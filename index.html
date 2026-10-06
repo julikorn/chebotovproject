@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,7 +12,6 @@
     />
 
     <link rel="stylesheet" href="/src/styles/normalize.css" />
-    <link rel="stylesheet" href="/src/global.scss" />
   </head>
   <body>
     <div id="app"></div>
@@ -56,7 +55,10 @@
             <h1 class="main__services--group-title">Услуги и сервисы</h1>
 
             <div class="main__services--desktop_group">
-              <div class="main__services--desktop_group--container">
+              <button
+                class="main__services--desktop_group--container feedback-open"
+                type="button"
+              >
                 <p
                   class="main__services--desktop_group--container-desktop_text"
                 >
@@ -65,9 +67,9 @@
                 <div
                   class="main__services--desktop_group--container-desktop_icon"
                 >
-                  <img src="./src/images/icons/tools.svg" />
+                  <img src="./src/images/icons/tools.svg" alt="" />
                 </div>
-              </div>
+              </button>
 
               <div class="main__services--desktop_group--container">
                 <p
@@ -450,7 +452,45 @@
         офертой
       </p>
     </footer>
+    <script type="module" src="/src/main.js"></script>
+
+    <div class="feedback-modal" hidden>
+      <div class="feedback-modal__overlay"></div>
+
+      <div class="feedback-modal__panel">
+        <button
+          class="feedback-modal__close"
+          type="button"
+          aria-label="Закрыть"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <h2 class="feedback-modal__title">Обратная связь</h2>
+
+        <form class="feedback-modal__form">
+          <input type="text" name="name" placeholder="Имя" required />
+          <input type="tel" name="phone" placeholder="Телефон" required />
+          <input type="email" name="email" placeholder="Электронная почта" />
+          <textarea name="message" placeholder="Сообщение" rows="4"></textarea>
+
+          <p class="feedback-modal__agreement">
+            Нажимая “отправить”, вы даете согласие на
+            <a href="#!">обработку персональных данных</a>
+            и соглашаетесь с нашей
+            <a href="#!">политикой конфиденциальности</a>
+          </p>
+
+          <button type="submit" class="feedback-modal__submit">
+            <span>ОТПРАВИТЬ</span>
+            <img src="/src/images/icons/arrow_dropdown.svg" alt="" />
+          </button>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+    <script src="./src/JS/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   </body>
-  <script src="./src/JS/swiper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </html>
