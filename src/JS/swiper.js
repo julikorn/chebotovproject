@@ -1,17 +1,16 @@
-// Убедитесь, что DOM полностью загружен
-document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".swiper", {
+    direction: "horizontal",
     loop: true,
-    slidesPerView: 'auto', // Автоматическая ширина слайдов
-    spaceBetween: 24, // Отступ между слайдами
+    slidesPerView: "auto",
+    spaceBetween: 24,
     centeredSlides: false,
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 });
